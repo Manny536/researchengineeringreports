@@ -4,6 +4,7 @@ Verification-only sibling of `pymath`.
 
 - Pattern: AgreeYa skill-me router (`agreeya-skills`)
 - Accuracy posture: EEV4 ledger + drift correction (independent rebuild before accept/reject)
+- v0.2 – 2026-08-07 Cowork optimization port (score 52→93): routing exclusions, verdict decision table, tools, tip fail worked example, handoff with `authoritative_value` supersedes claim
 - v0.1 – 2026-08-07 greenfield example
 
 ## Host repository

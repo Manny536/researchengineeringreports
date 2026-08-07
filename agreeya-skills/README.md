@@ -7,8 +7,8 @@ This pack follows the **AgreeYa skill-me** router pattern (platform adapters, re
 | | |
 |---|---|
 | **Pack id** | `PEAICE-RER-AGREEYA-SKILLS-001` |
-| **Version** | `0.1.0` |
-| **State** | ACTIVE · draft-for-use |
+| **Version** | `0.2.0` |
+| **State** | ACTIVE · draft-for-use · Cowork static quality optimized |
 | **Primary runtime** | GitHub Copilot Agent Skills |
 | **Skill-me lineage** | [agreeya-org2-core/agreeya-skills](https://github.com/agreeya-org2-core/agreeya-skills) @ `c7ea906` |
 | **Skill-me primary author** | [@jim-duncan](https://github.com/jim-duncan) (AgreeYa) |
@@ -28,6 +28,9 @@ Read these before authoring or shipping skill changes:
 1. **[GOVERNANCE.md](./GOVERNANCE.md)** – ownership, change control, shareable-language, non-sovereignty, secrets, PR rules  
 2. **[ACCURACY.md](./ACCURACY.md)** – claim labels, method ladder, verification mandatory, failure modes  
 3. **[PROVENANCE.md](./PROVENANCE.md)** – credits (AgreeYa · Jim Duncan · skill-me), EEV4 custody map, design history  
+4. **[docs/skill-quality-reports/](./docs/skill-quality-reports/)** – Cowork static scores (v0.2: pymath 97 / pystats 94 / pycheck 93)  
+
+v0.2 skill bodies include: sibling **Do NOT use** routing, inlined output contracts, worked examples, named tools, and `### handoff` with **label non-promotion** (and pycheck claim supersession).
 
 Runtime skill bodies stay **workplace-plain**. Lab framework names stay in provenance/governance unless the user asks for methodology.
 

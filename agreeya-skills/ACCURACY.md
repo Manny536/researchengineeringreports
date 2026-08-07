@@ -22,6 +22,8 @@ Every material number or assertion carries exactly one label:
 
 **Hard rule:** never promote `ASSUMED` or `OPEN` to `KNOWN`.
 
+**Handoff rule (v0.2):** each skill ends multi-step work with a machine-stable `### handoff` block. Labels **never promote across a handoff**. For `pycheck` failures, `authoritative_value` supersedes the claimed figure downstream (`supersedes_claim: true`).
+
 ## 3. Typed question (hold)
 
 Before computing, restate the ask in one line:

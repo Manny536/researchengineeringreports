@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optimization report</title>
+<style>
+ *{margin:0;padding:0;box-sizing:border-box}
+ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8fafc;color:#1f2937;line-height:1.6;padding:1.5rem;max-width:820px;margin:0 auto}
+ .hero{background:#dcfce7;border:1px solid #16a34a33;border-radius:20px;padding:1.6rem;display:flex;gap:1.1rem;align-items:center;margin-bottom:1.25rem}
+ .hero .e{font-size:2.8rem} .hero h1{font-size:1.35rem;color:#111827} .hero p{color:#374151}
+ .kpis{display:flex;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap}
+ .kpi{flex:1;min-width:150px;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:1rem 1.2rem}
+ .kpi .v{font-size:1.7rem;font-weight:800;color:#111827} .kpi .l{font-size:.8rem;color:#6b7280}
+ .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1.3rem;margin-bottom:1rem}
+ .card h3{font-size:1.02rem;color:#111827;margin-bottom:.2rem}
+ .delta{font-weight:800} .up{color:#16a34a} .flat{color:#6b7280}
+ .mini{display:flex;align-items:center;gap:.5rem;margin:.25rem 0;font-size:.82rem}
+ .mini .lab{width:3.2rem;color:#6b7280} .mini .t{flex:1;height:8px;background:#eef2f7;border-radius:5px;overflow:hidden}
+ .mini .f{height:100%;border-radius:5px}
+ .lab2{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:#9ca3af;margin:.7rem 0 .3rem}
+ ul{margin-left:1.1rem;font-size:.9rem} li{margin-bottom:.2rem}
+ .why span{display:inline-block;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:.12rem .6rem;font-size:.78rem;margin:.15rem .2rem .15rem 0;font-weight:600}
+ table{width:100%;border-collapse:collapse;font-size:.88rem}
+ th,td{text-align:left;padding:.5rem;border-bottom:1px solid #f1f5f9} th{font-size:.72rem;text-transform:uppercase;color:#9ca3af}
+ .gate-acc{color:#15803d;font-weight:700} .gate-rej{color:#6b7280;font-weight:700}
+ .footer{text-align:center;color:#9ca3af;font-size:.75rem;margin-top:1.5rem}
+ details summary{cursor:pointer;font-weight:600;color:#374151}
+</style></head><body>
+<div class="hero"><div class="e">📈</div><div>
+<h1>We tuned 3 of your 3 skills</h1>
+<p>Average quality went from <b>50</b> to <b>95</b> out of 100, and 0 more skills now clear the publish bar. Here's what changed and why.</p>
+</div></div>
+<div class="kpis">
+ <div class="kpi"><div class="v up">+45</div><div class="l">average score gain</div></div>
+ <div class="kpi"><div class="v">3/3</div><div class="l">skills improved</div></div>
+ <div class="kpi"><div class="v">0→0</div><div class="l">meet the publish bar</div></div>
+ <div class="kpi"><div class="v">3/3</div><div class="l">edits accepted by the gate</div></div>
+</div>
+
+<div class="card"><h3>Every skill, before → after</h3>
+<table><tr><th>Skill</th><th>Before</th><th>After</th><th>Change</th><th>Gate</th></tr><tr><td><strong>pystats</strong></td><td>47</td><td>94</td><td class='delta up'>▲ +47</td><td><span class="gate-acc">accepted</span></td></tr><tr><td><strong>pymath</strong></td><td>52</td><td>97</td><td class='delta up'>▲ +45</td><td><span class="gate-acc">accepted</span></td></tr><tr><td><strong>pycheck</strong></td><td>52</td><td>93</td><td class='delta up'>▲ +41</td><td><span class="gate-acc">accepted</span></td></tr></table>
+<p style="font-size:.82rem;color:#6b7280;margin-top:.6rem">The "gate" only keeps an edit if it actually raises the score — so you never get a change that makes a skill worse.</p>
+</div>
+
+<h2 style="font-size:1.1rem;margin:1.2rem 0 .6rem">What changed in each improved skill</h2>
+<div class="card">
+ <div style="display:flex;justify-content:space-between;align-items:baseline">
+   <h3>pystats</h3>
+   <span class="delta up">47 → 94  (+47)</span>
+ </div>
+ <div class="mini"><span class="lab">before</span><div class="t"><div class="f" style="width:47%;background:#9ca3af"></div></div><b>47</b></div><div class="mini"><span class="lab">after</span><div class="t"><div class="f" style="width:94%;background:#16a34a"></div></div><b>94</b></div>
+ <div class="lab2">What changed</div><ul><li>Added &#x27;Do NOT use&#x27; exclusions routing arithmetic-&gt;pymath, audit-&gt;pycheck</li><li>Added &#x27;When NOT to Use&#x27; table incl. a people-ranking refusal</li><li>Added named Tools table; every statistic must be computed in code</li><li>Inlined the full output contract with per-section content rules</li><li>Added a worked outlier example (mean vs median divergence)</li><li>Added &#x27;### handoff&#x27; carrying n + assumptions forward</li><li>Added 7-rule Guardrails: no significance without method/n, center+spread together, no people-ranking</li></ul>
+ <div class="lab2">Why it's better</div><div class="why"><span>Lowest baseline of the three (47) - the rules were sound but too terse to steer reliably</span><span>The output skeleton had headings but no content rules, so section quality varied run to run</span><span>Sample-size caveats were dropped when a result crossed into another skill</span></div>
+ 
+</div><div class="card">
+ <div style="display:flex;justify-content:space-between;align-items:baseline">
+   <h3>pymath</h3>
+   <span class="delta up">52 → 97  (+45)</span>
+ </div>
+ <div class="mini"><span class="lab">before</span><div class="t"><div class="f" style="width:52%;background:#9ca3af"></div></div><b>52</b></div><div class="mini"><span class="lab">after</span><div class="t"><div class="f" style="width:97%;background:#16a34a"></div></div><b>97</b></div>
+ <div class="lab2">What changed</div><ul><li>Added &#x27;Do NOT use&#x27; exclusions routing audit-&gt;pycheck, stats-&gt;pystats</li><li>Added &#x27;When NOT to Use&#x27; table with 6 off-ramps incl. xlsx/docx/PowerBI</li><li>Added named Tools table (Bash/python, core-GetRange, SearchM365, ExecuteQuery, CreateArtifact)</li><li>Inlined a fixed 5-section output contract (Answer/Given/Method/Check/Open)</li><li>Added a worked SLA example showing labels + reverse-check</li><li>Added a machine-stable &#x27;### handoff&#x27; block with label non-promotion rule</li><li>Added a 7-rule Guardrails section (no fabrication, draft-only, no smoothing)</li></ul>
+ <div class="lab2">Why it's better</div><div class="why"><span>Scope was the weakest dimension (4/25) - no exclusions meant it stole triggers from its own siblings</span><span>One-shot yield depends on a fixed output shape; the format lived in a separate file the model had to fetch</span><span>Chains lost assumption state between steps, so ASSUMED silently became fact downstream</span></div>
+ 
+</div><div class="card">
+ <div style="display:flex;justify-content:space-between;align-items:baseline">
+   <h3>pycheck</h3>
+   <span class="delta up">52 → 93  (+41)</span>
+ </div>
+ <div class="mini"><span class="lab">before</span><div class="t"><div class="f" style="width:52%;background:#9ca3af"></div></div><b>52</b></div><div class="mini"><span class="lab">after</span><div class="t"><div class="f" style="width:93%;background:#16a34a"></div></div><b>93</b></div>
+ <div class="lab2">What changed</div><ul><li>Added &#x27;Do NOT use&#x27; exclusions routing greenfield-&gt;pymath, method design-&gt;pystats</li><li>Added &#x27;When NOT to Use&#x27; table incl. refusing to judge a person&#x27;s work</li><li>Added named Tools table + rule to rebuild from original inputs, never the author&#x27;s intermediates</li><li>Expanded the output contract with explicit pass/fail/conditional verdict rules</li><li>Added a worked tip-verification example showing a fail with a delta</li><li>Added &#x27;### handoff&#x27; where authoritative_value supersedes the claimed figure downstream</li><li>Added 6-rule Guardrails: independent rebuild or OPEN, audit the number not the person</li></ul>
+ <div class="lab2">Why it's better</div><div class="why"><span>Verdict vocabulary existed but had no decision rule, so &#x27;conditional&#x27; was applied inconsistently</span><span>Nothing prevented inheriting the author&#x27;s error by reusing their intermediate steps</span><span>A corrected figure had no defined precedence over the original when passed along a chain</span></div>
+ 
+</div>
+
+<div class="footer">Generated 2026-08-07 23:11 UTC · Cowork skill optimization</div>
+</body></html>
