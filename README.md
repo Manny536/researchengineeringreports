@@ -8,9 +8,16 @@ This repo is built around the **L²_C cross model continuity and jailbreak gover
 
 | Layer | Report | Role |
 |---|---|---|
+| OBS-001 | [L²_C Authority Detection — Live Observation Note](reports/l2c-authority-detection-observation.md) | Assumption-form instruction detection, bounded authority, harm typing, and MCP + RAG + multimodal routing |
 | v1.0 | [Cross Model Continuity and Jailbreak Governance Study](https://docs.google.com/document/d/1wlnFq3-u5To-fR7BODjgJJ_qdPjyF1WxtKT1SeXOZpQ/edit?usp=sharing) | Top synthesis over jailbreak governance, access disruption, Claude Opus 4.8 review, and cross model continuity |
 | v0.6 | [Verification Integrity Correction](https://docs.google.com/document/d/1_MX6B1H9HD6t3hLA022VWexHfR67Ml0GLy5BblyKNBM/edit?usp=sharing) | Correction layer over the v0.5 verification claim, with the 55-test acceptance surface |
 | v0.5 | [Cross Agent Probe Deepening](https://docs.google.com/document/d/1rjabazy9BvZc8HOo7Lf45N9eDWwZpeucz14ya8MtMdU/edit?usp=sharing) | Original cross-agent architecture, CoWork attribution, deterministic tie-break, and transfer contract |
+
+## Registered observation
+
+`PEAICE-RER-AUTH-DETECT-OBS-001` records a live prompt case in which instruction-shaped content asserted page status, user intent, and tool authority without independent evidence. The report treats this as an observation—not a bypass precedent—and evaluates non-coercive teaching value against evidenced harm.
+
+Route: **MM observation → RAG verification → MCP authority boundary → L²_C outcome**.
 
 ## Public portals
 
