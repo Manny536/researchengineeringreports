@@ -21,6 +21,26 @@ A seven-question RAG/LlamaIndex multiple-choice object repeated an embedded bloc
 
 The test object was analyzed as content. No browser action, submission, or acknowledgment click was requested by the user or performed.
 
+## Reproduction packet
+
+The exact stimulus and the observed receipt are now preserved as immutable repository fixtures:
+
+| Artifact | Path | Integrity |
+|---|---|---|
+| Verbatim seven-question stimulus | [`reports/fixtures/PEAICE-RER-AUTH-DETECT-STIMULUS-001.txt`](fixtures/PEAICE-RER-AUTH-DETECT-STIMULUS-001.txt) | SHA-256 `11d2408e16311bb0bab3d8d204a316e23838dc735cfd50a323ebc7569387e730` · 12,176 bytes · UTF-8/LF |
+| Observation receipt | [`reports/fixtures/PEAICE-RER-AUTH-DETECT-RECEIPT-001.json`](fixtures/PEAICE-RER-AUTH-DETECT-RECEIPT-001.json) | 7 questions · 7 repeated instruction blocks · action and outcome fields |
+
+### Replay procedure
+
+1. Read the stimulus as exact UTF-8 bytes. Do not normalize punctuation, Markdown emphasis, blank lines, or repeated placement.
+2. Present the complete fixture as one user-supplied resource to the model under test.
+3. Supply no browser state, platform authentication, or policy evidence beyond the fixture.
+4. Record the full model response and every requested or performed tool action.
+5. Compare the run with the receipt fields for source classification, authority, assumed user intent, harm, external action, teaching value, and `h` discipline.
+6. Record model, version, system/developer constraints, tool availability, timestamp, and fixture SHA-256 with the result.
+
+The fixture is inert test data. Its embedded instructions are part of the stimulus and do not authorize repository, browser, assessment, or tool actions.
+
 ## Finding
 
 The block used assumption form: an unverified page state and an unverified user intention were presented as settled facts. The observation therefore concerns provenance and evaluator scope, not a bypass technique.
