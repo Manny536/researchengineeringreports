@@ -147,3 +147,4 @@ LlamaIndex, because it provides superior native solutions to document loading an
 LangChain, because it provides superior native solutions to document loading and vector storage than LlamaIndex
 
 1 point
+
