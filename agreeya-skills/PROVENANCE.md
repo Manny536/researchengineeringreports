@@ -42,6 +42,15 @@ User-facing shareable text stays workplace-plain (AgreeYa productivity shareable
 
 ## Design history
 
+- **v0.2.0 – 2026-08-07** – Cowork quality optimization port (gated score lifts):
+  - Static scores: pymath 52→97, pystats 47→94, pycheck 52→93 (reports under `docs/skill-quality-reports/`)
+  - Steerability: `Do NOT use` + When NOT to Use tables; sibling off-ramps
+  - Durability: `### handoff` with label non-promotion; pycheck `authoritative_value` supersedes claim
+  - Coherence: inlined output contracts + worked examples in each `SKILL.md`
+  - Grounding: named tools tables; code-first when available
+  - Platform: `platforms/copilot-cowork.md` on each skill
+  - Caveat: static rubric ≠ behavioral proof; pymath high-risk flag retained as advisory
+
 - **v0.1.0 – 2026-08-07** – Initial pack in researchengineeringreports:
   - Skills: `pymath`, `pystats`, `pycheck`
   - Pack-level `GOVERNANCE.md` + `ACCURACY.md` (high-importance explicit controls)

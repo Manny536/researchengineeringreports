@@ -30,6 +30,8 @@ Shareable user-facing output stays plain (no framework marketing language), matc
 
 ## Design history
 
+- v0.2 – 2026-08-07 – Cowork optimization port (score 52→97): Do NOT use / When NOT to Use, named tools, inlined 5-section contract + SLA worked example, `### handoff` non-promotion, 7 guardrails, copilot-cowork adapter. Reports: `docs/skill-quality-reports/`.
+
 - v0.1 – 2026-08-07 – Greenfield scaffold:
   - Library metaphor: “pymath” as high-accuracy math skill for mundane → IT tasks
   - Primary platform: GitHub Copilot (project or personal skill)

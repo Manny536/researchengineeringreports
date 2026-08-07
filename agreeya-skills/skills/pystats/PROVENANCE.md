@@ -4,6 +4,7 @@ Thin sibling scaffold of `pymath` for statistical tasks.
 
 - Pattern: AgreeYa skill-me router (`agreeya-skills`)
 - Accuracy posture: EEV4-style custody (typed question, evidence, ledger labels, drift correction) in neutral language
+- v0.2 – 2026-08-07 Cowork optimization port (score 47→94): routing exclusions, tools, inlined contract, outlier worked example, handoff with `n`, 7 guardrails including people-ranking refusal
 - v0.1 – 2026-08-07 greenfield example
 
 ## Host repository
