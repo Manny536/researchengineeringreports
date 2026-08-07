@@ -93,6 +93,31 @@ LICENSE
 
 After Pages is enabled, point the desired `peaice.org` route or subdomain at the GitHub Pages deployment.
 
+## AgreeYa Skills pack (accuracy · governance)
+
+Portable GitHub Copilot **Agent Skills** for high-accuracy numeric work live in this repository:
+
+**→ [agreeya-skills/](./agreeya-skills/)** · designation `PEAICE-RER-AGREEYA-SKILLS-001`
+
+| Skill | Role |
+|---|---|
+| `pymath` | Mundane → IT math with mandatory verification |
+| `pystats` | Statistics without overclaiming |
+| `pycheck` | Independent audit of existing figures |
+
+**High-importance controls (explicit):**
+
+- [agreeya-skills/GOVERNANCE.md](./agreeya-skills/GOVERNANCE.md) – ownership, draft-only boundary, change control, shareable language  
+- [agreeya-skills/ACCURACY.md](./agreeya-skills/ACCURACY.md) – claim labels, method ladder, unit hygiene, pass bar  
+- [agreeya-skills/PROVENANCE.md](./agreeya-skills/PROVENANCE.md) – credits  
+
+**AgreeYa skill-me lineage:** [agreeya-org2-core/agreeya-skills](https://github.com/agreeya-org2-core/agreeya-skills) · primary author [@jim-duncan](https://github.com/jim-duncan).
+
+Project runtime for this repo: [`.github/skills/`](./.github/skills/) (mirrors canonical `agreeya-skills/skills/`).  
+Install hub: [agreeya-skills/docs/install/](./agreeya-skills/docs/install/).
+
+Skills produce **labeled drafts**. They do not close research OPEN claims and do not replace the verification integrity rule above.
+
 ## Repo role
 
 `researchengineeringreports` is the public report index for PeAIce research engineering. It is not just a file dump. It is the continuity layer for cross-agent, cross-model, and cross-platform research transfer.
