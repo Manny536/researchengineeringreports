@@ -69,9 +69,23 @@ Full multi-platform guide (AgreeYa skill-me install hub shape):
 
 **→ [docs/install/README.md](./docs/install/README.md)**
 
+### Copilot Cowork (complete single document)
+
+Clone this repo, then use the complete drop file:
+
+- [docs/install/COPILOT-COWORK-CLONE-DROP.md](./docs/install/COPILOT-COWORK-CLONE-DROP.md)
+- [docs/install/COPILOT-COWORK-CLONE-DROP.docx](./docs/install/COPILOT-COWORK-CLONE-DROP.docx)
+
+```bash
+git clone https://github.com/Manny536/researchengineeringreports.git
+cd researchengineeringreports
+./agreeya-skills/scripts/drop-to-cowork.sh
+# → ~/Documents/Cowork/skills/{pymath,pystats,pycheck}/
+```
+
 This repository already has project-scope skills under `.github/skills/` so Copilot in this repo can discover them after pull.
 
-Personal (this machine only):
+Personal GitHub Copilot (this machine only):
 
 ```bash
 ./agreeya-skills/scripts/drop-pymath-pack.sh personal

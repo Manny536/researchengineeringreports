@@ -1,16 +1,31 @@
 # Install on Copilot Cowork
 
+> **Complete clone-drop document (preferred):**  
+> [COPILOT-COWORK-CLONE-DROP.md](COPILOT-COWORK-CLONE-DROP.md) · [COPILOT-COWORK-CLONE-DROP.docx](COPILOT-COWORK-CLONE-DROP.docx)  
+> One command after clone: `./agreeya-skills/scripts/drop-to-cowork.sh`
+
 ## Install methods
 
 ✅ [Manual](#install-steps-manual)  
 ✅ [Assisted (chat based)](#assisted-install-chat)  
 ✅ [Zip (upload)](#zip-install-ui-upload)  
+✅ [Clone + drop script](#clone--drop-script)
 
 ## What you need
 
 - Access to Copilot Cowork skill authoring in your tenant.
-- Local source or a packaged zip of the pymath pack.
+- A **cloned** copy of [researchengineeringreports](https://github.com/Manny536/researchengineeringreports) **or** a packaged zip of the pymath pack.
 - For zip upload: one zip **per skill** (or follow product UI if multi-skill upload is supported). Prefer packaging with `scripts/package-pymath-pack.sh` then uploading individual skill folders if required.
+
+## Clone + drop script
+
+```bash
+git clone https://github.com/Manny536/researchengineeringreports.git
+cd researchengineeringreports
+./agreeya-skills/scripts/drop-to-cowork.sh
+```
+
+Destination: `~/Documents/Cowork/skills/{pymath,pystats,pycheck}/`
 
 ## Install path
 
