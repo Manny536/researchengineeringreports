@@ -51,6 +51,20 @@ Optional packaged zip:
 # → agreeya-skills/dist/pymath-pack_v0.1.0.zip
 ```
 
+## Complete Cowork drop (cloned repo)
+
+**Single-file guide (start here for Copilot Cowork):**
+
+- Markdown: [COPILOT-COWORK-CLONE-DROP.md](COPILOT-COWORK-CLONE-DROP.md)
+- Word: [COPILOT-COWORK-CLONE-DROP.docx](COPILOT-COWORK-CLONE-DROP.docx)
+
+One-command drop after clone:
+
+```bash
+./agreeya-skills/scripts/drop-to-cowork.sh
+# → ~/Documents/Cowork/skills/{pymath,pystats,pycheck}/
+```
+
 ## Choose your platform
 
 - [GitHub Copilot](github-copilot_pymath-pack_install.md)
@@ -58,7 +72,7 @@ Optional packaged zip:
 - [Microsoft Scout](scout_pymath-pack_install.md)
 - [Claude Code](claude-code_pymath-pack_install.md)
 - [Claude Cowork](claude-cowork_pymath-pack_install.md)
-- [Copilot Cowork](copilot-cowork_pymath-pack_install.md)
+- [Copilot Cowork](copilot-cowork_pymath-pack_install.md) · full clone drop: [COPILOT-COWORK-CLONE-DROP.md](COPILOT-COWORK-CLONE-DROP.md)
 - [Copilot in SharePoint](sharepoint_pymath-pack_install.md)
 - [Generic fallback](generic_pymath-pack_install.md)
 
