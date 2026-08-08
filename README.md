@@ -93,6 +93,19 @@ LICENSE
 
 After Pages is enabled, point the desired `peaice.org` route or subdomain at the GitHub Pages deployment.
 
+## Cowork Skills Library (full)
+
+**→ [cowork-skills-library/](./cowork-skills-library/)** · designation `PEAICE-RER-COWORK-SKILLS-LIBRARY-001`
+
+Full Microsoft Copilot Cowork library: routing, RAG grounding, productivity drafts, claim ledger, Kakeya chain, evidence receipts, plus the accuracy pack (pymath / pystats / pycheck / review-council).
+
+```bash
+./cowork-skills-library/scripts/drop-library-to-cowork.sh
+# → ~/Documents/Cowork/skills/*
+```
+
+Catalog: [cowork-skills-library/CATALOG.md](./cowork-skills-library/CATALOG.md)
+
 ## AgreeYa Skills pack (accuracy · governance)
 
 Portable GitHub Copilot **Agent Skills** for high-accuracy numeric work live in this repository:

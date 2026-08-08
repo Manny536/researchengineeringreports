@@ -17,9 +17,13 @@ This pack follows the **AgreeYa skill-me** router pattern (platform adapters, re
 
 | Skill | Path | Job |
 |---|---|---|
-| **pymath** | [`skills/pymath/`](./skills/pymath/) | High-accuracy math from mundane arithmetic through IT-level tasks |
-| **pystats** | [`skills/pystats/`](./skills/pystats/) | Descriptive and careful statistical work without overclaiming |
-| **pycheck** | [`skills/pycheck/`](./skills/pycheck/) | Independent verification of someone else’s numbers |
+| **pymath** | [`skills/pymath/`](./skills/pymath/) | High-accuracy math + KakeyaLogic \(D_2/C_x/W_K\), bit leakage, Polyak |
+| **pystats** | [`skills/pystats/`](./skills/pystats/) | Descriptive stats; multi-run coherence aggregation only |
+| **pycheck** | [`skills/pycheck/`](./skills/pycheck/) | Independent verification; supersede bad coherence claims |
+| **review-council** | [`skills/review-council/`](./skills/review-council/) | Independent reviews; no self-certify (local integration) |
+
+KakeyaLogic L²_C scale doc: [`../docs/kakeyalogic-l2c-coherence-scale.md`](../docs/kakeyalogic-l2c-coherence-scale.md)  
+Probe code: [`skills/pymath/scripts/kakeyalogic_coherence.py`](./skills/pymath/scripts/kakeyalogic_coherence.py)
 
 ## High-importance controls
 

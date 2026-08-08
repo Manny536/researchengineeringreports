@@ -42,6 +42,14 @@ User-facing shareable text stays workplace-plain (AgreeYa productivity shareable
 
 ## Design history
 
+- **v0.3.0 – 2026-08-07** – KakeyaLogic L²_C coherence scale probe:
+  - `D_x` / `D_2` / `C_x`, proposed `W_K`, `bit_length` leakage, Polyak (`mu`)
+  - LangGraph-style loop/branch + JSON state persistence (`CoherenceGraph`)
+  - RAG referenced as high-level skill **driver** (not a truth oracle)
+  - Chain handoff schema; review-council local integration (upstream not writable)
+  - Code/tests/docs: `skills/pymath/scripts/kakeyalogic_coherence.py`, `eval/test_…`, `docs/kakeyalogic-l2c-coherence-scale.md`
+  - `Cowork.zip` treated as evidence only — archive not modified
+
 - **v0.2.0 – 2026-08-07** – Cowork quality optimization port (gated score lifts):
   - Static scores: pymath 52→97, pystats 47→94, pycheck 52→93 (reports under `docs/skill-quality-reports/`)
   - Steerability: `Do NOT use` + When NOT to Use tables; sibling off-ramps
