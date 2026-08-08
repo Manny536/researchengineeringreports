@@ -24,6 +24,8 @@ Every material number or assertion carries exactly one label:
 
 **Handoff rule (v0.2):** each skill ends multi-step work with a machine-stable `### handoff` block. Labels **never promote across a handoff**. For `pycheck` failures, `authoritative_value` supersedes the claimed figure downstream (`supersedes_claim: true`).
 
+**Coherence-chain handoff (v0.3):** stages must carry `stage`, receipts, `delta`, `rho`, `scale_base`, `scale_depth`, `coherence_score`, bit fields, `label`, `assumptions`, `open`, `evaluator_id`. Extra labels: `STRUCTURAL ANALOGY`, `PROPOSED`. Missing `allowed_growth_bits` keeps leakage `OPEN`.
+
 ## 3. Typed question (hold)
 
 Before computing, restate the ask in one line:

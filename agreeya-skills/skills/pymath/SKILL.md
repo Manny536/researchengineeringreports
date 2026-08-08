@@ -11,11 +11,15 @@ description: |-
     - "what's the rate" / "throughput" / "bit rate"
     - "capacity planning" / "storage size"
     - "SLA" / "uptime" / "downtime minutes"
+    - "scale depth" / "D_2" / "coherence score" / "C_x" / "W_K"
+    - "bit_length" / "carrier leakage" / "Polyak" / "heavy-ball"
+    - "coherence chain" / "Prosody^" / "KakeyaLogic"
     - "/pymath"
 
   Do NOT use when:
     - auditing someone else's claimed figure → use pycheck
     - averages, samples, significance, confidence intervals → use pystats
+    - multi-perspective artifact review / self-certify ban → use review-council
     - building a full spreadsheet model or dashboard → use xlsx / Power BI tools
     - drafting a narrative document only → use docx (may call pymath for numbers)
 disable-model-invocation: false
@@ -42,7 +46,8 @@ Read when needed (detail lives here in SKILL.md first; references deepen, not re
 
 1. Prefer this file's output contract and guardrails.
 2. Optional depth: [`references/workflow.md`](references/workflow.md), [`references/accuracy-rules.md`](references/accuracy-rules.md).
-3. Runtime adapter if present: [`platforms/github-copilot.md`](platforms/github-copilot.md), [`platforms/copilot-cowork.md`](platforms/copilot-cowork.md), [`platforms/generic.md`](platforms/generic.md).
+3. KakeyaLogic scale probe: run [`scripts/kakeyalogic_coherence.py`](scripts/kakeyalogic_coherence.py); theory note at repo `docs/kakeyalogic-l2c-coherence-scale.md`.
+4. Runtime adapter if present: [`platforms/github-copilot.md`](platforms/github-copilot.md), [`platforms/copilot-cowork.md`](platforms/copilot-cowork.md), [`platforms/generic.md`](platforms/generic.md).
 
 ## Tools (named)
 
@@ -51,9 +56,11 @@ Prefer **named tools over mental math** for any non-trivial figure. Never invent
 | Need | Prefer (when available) |
 |---|---|
 | Arithmetic, unit chains, formulas | `python` / Bash code execution (stdlib `decimal`, `fractions`; optional `sympy`) |
+| Scale depth / coherence / bit leakage / Polyak | `python` + [`scripts/kakeyalogic_coherence.py`](scripts/kakeyalogic_coherence.py) (`math.log2`, `int.bit_length`) |
 | Values in a workbook range | Host workbook read tool (e.g. `core-GetRange` or equivalent) |
 | Values in mail/files/chat | Host search tool (e.g. Search M365 / workspace search) |
 | Semantic model / dataset measure | Host query tool (e.g. Power BI `ExecuteQuery` or equivalent) |
+| RAG grounding (driver, not a proof) | Host retrieval / Search tools — elevate ASSUMED→KNOWN only with cited hits |
 | Persist a calc artifact | Host artifact/create tool when user wants a saved sheet or snippet |
 
 If no code tool is available: stay on L0–L2, show every step, run a reverse-check, and state **Method: hand** in the output.
@@ -65,9 +72,11 @@ If no code tool is available: stay on L0–L2, show every step, run a reverse-ch
 | `KNOWN` | From user input or authoritative cited/tool source |
 | `COMPUTED` | Derived by explicit method from labeled inputs |
 | `ASSUMED` | Modeling choice the user did not supply |
+| `STRUCTURAL ANALOGY` | Mapping/metaphor without theorem claim (e.g. Polyak↔L²_C) |
+| `PROPOSED` | Explicit unstarred proposal (e.g. \(W_K\)) — not formal star-operator |
 | `OPEN` | Missing, conflicting, or unverified |
 
-**Hard rule:** never promote `ASSUMED` or `OPEN` to `KNOWN`. Labels never get promoted across a handoff.
+**Hard rule:** never promote weaker labels to `KNOWN` without new evidence. Labels never get promoted across a handoff.
 
 ## Input gate
 
@@ -171,6 +180,53 @@ check: pass
 skill: pymath
 ```
 
+## KakeyaLogic / L²_C coherence scale (pymath owns compute)
+
+Chain (markers `^` and `*` are **literal**, not exponentiation):
+
+```text
+Conversation → Prosody^ → Reading(internal-speech proxy from user tokens only)
+→ Interpretability* → PolyakMomentum^
+```
+
+| Quantity | Domain | Implementation |
+|---|---|---|
+| \(\beta=\rho/\delta\) | \(\delta>0,\rho>0\) | `beta_ratio` |
+| \(D_2=\|\log_2\rho-\log_2\delta\|\) | same | `scale_depth_2` / `math.log2` |
+| \(C_2=2^{-D_2}\in(0,1]\) | base 2 | `coherence_score_2` |
+| \(W_K=D_x(\rho/\delta)^{-1/2}\) | proposed | `weighted_scale_wk` → label **`PROPOSED`** |
+| \(B(n)=\|n\|.\mathrm{bit\_length()}\) | integers; \(B(0)=0\) | `bit_length_n` |
+| Polyak \(z_{t+1}=z_t-\alpha\nabla J+\mu(z_t-z_{t-1})\) | \(\alpha>0,\,0\le\mu<1\) | `polyak_run` — use **`mu` not beta**; L²_C map = **`STRUCTURAL ANALOGY`** |
+
+**Boundary:** \(D_{\mathrm{scale}}\neq a(\rho-\delta)+b\) — multiplicative depth, not linear regression.
+
+**Bit leakage:** missing `allowed_growth_bits` ⇒ leakage **`OPEN`** (never assume 0). Bit length ≠ semantic leakage (negative control required).
+
+**Looping / branching / persistence:** `CoherenceGraph` (LangGraph-style state+checkpoint+conditional repair branch). Optional `langgraph` package — not required.
+
+**RAG driver:** high-level retrieval skill capabilities ground ASSUMED→KNOWN; RAG does not certify truth.
+
+### Coherence-chain handoff (mandatory fields)
+
+```text
+stage
+input_receipt
+output_receipt
+delta
+rho
+scale_base
+scale_depth
+coherence_score
+bits_in
+bits_out
+allowed_growth_bits
+leakage_bits
+label
+assumptions
+open
+evaluator_id
+```
+
 ## Guardrails
 
 1. **No fabrication** – never invent constants, FX, tax, product limits, or tool results.  
@@ -178,8 +234,10 @@ skill: pymath
 3. **No smoothing** – conflicting inputs stay conflicting under `OPEN`.  
 4. **No fake precision** – precision matches weakest input.  
 5. **No silent unit drops** – bits/bytes and SI/IEC must be explicit.  
-6. **Stay in lane** – audit → pycheck; statistics → pystats.  
-7. **Handoff integrity** – never promote labels across `### handoff`.
+6. **Stay in lane** – audit → pycheck; statistics → pystats; multi-review → review-council.  
+7. **Handoff integrity** – never promote labels across `### handoff`.  
+8. **No mind-reading** – Reading stage is token-bounded only.  
+9. **No false theoremhood** – `PROPOSED` / `STRUCTURAL ANALOGY` stay labeled.
 
 ## Failure behavior
 

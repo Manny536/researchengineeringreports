@@ -10,9 +10,14 @@ description: |-
     - "spot unit errors" / "is this right"
     - "/pycheck"
 
+  Use also when:
+    - "audit scale_depth" / "audit coherence_score" / "audit leakage_bits"
+    - "verify D_2" / "verify W_K claim"
+
   Do NOT use when:
     - computing a new quantity from scratch with no claimed answer → use pymath
     - designing a statistical method or sample inference → use pystats
+    - multi-perspective review panel → use review-council
     - judging a person's competence or performance → refuse (audit the number, not the person)
     - primary ask is a full report or workbook rebuild → docx/xlsx (call pycheck for the figures)
 disable-model-invocation: false
@@ -153,6 +158,16 @@ skill: pycheck
 supersedes_claim: true
 ```
 
+## KakeyaLogic audit (pycheck)
+
+Independently rebuild claimed `scale_depth`, `coherence_score`, `leakage_bits` via  
+`scripts/kakeyalogic_coherence.py` → `audit_claimed_coherence` (import path under **pymath** skill tree).
+
+- On fail: `authoritative_value` / authoritative metrics **supersede** the claim (`supersedes_claim: true`).  
+- Missing `allowed_growth_bits` on a leakage claim → verdict `conditional` or `fail` with `OPEN` — never assume budget 0.  
+- Bit-length pass does **not** certify semantic integrity (limitation must be stated if relevant).  
+- Do not re-label `PROPOSED` \(W_K\) or `STRUCTURAL ANALOGY` Polyak maps as `KNOWN`.
+
 ## Guardrails
 
 1. Independent rebuild or mark `OPEN` – never rubber-stamp.  
@@ -160,7 +175,7 @@ supersedes_claim: true
 3. Do not inherit author intermediates.  
 4. No fabrication of missing source documents.  
 5. Draft-only – no send/approve.  
-6. Greenfield compute → pymath; inference design → pystats.  
+6. Greenfield compute → pymath; inference design → pystats; panel → review-council.  
 7. On fail, handoff `authoritative_value` supersedes claim downstream.
 
 ## Completion criteria

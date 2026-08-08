@@ -11,7 +11,7 @@ set -euo pipefail
 
 PACK_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SOURCE_ROOT="${PACK_ROOT}/skills"
-SKILLS=(pymath pystats pycheck)
+SKILLS=(pymath pystats pycheck review-council)
 
 usage() {
   cat <<'EOF'

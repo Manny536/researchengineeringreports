@@ -12,9 +12,14 @@ description: |-
     - "A/B" / "conversion rate" (statistical read)
     - "/pystats"
 
+  Use also when:
+    - "aggregate coherence runs" / "mean scale_depth across trials"
+    - "spread of D_2 over n chains"
+
   Do NOT use when:
     - pure arithmetic, unit conversion, SLA/rate formulas without a sample → use pymath
     - auditing a claimed figure for arithmetic/unit error → use pycheck
+    - single-run D_2/C_x/Polyak compute → use pymath
     - ranking or scoring people for HR decisions → refuse (see Guardrails)
     - building a BI dashboard as the primary deliverable → Power BI / xlsx tools
 disable-model-invocation: false
@@ -140,6 +145,15 @@ check: pass
 skill: pystats
 ```
 
+## KakeyaLogic multi-run aggregation (pystats only)
+
+When multiple chain runs exist, aggregate with `aggregate_runs` (pymath scripts) or equivalent:
+
+- Carry **`n`**, mean/variance of `scale_depth` (or other metric), min/max.  
+- Descriptive only unless sampling design is `KNOWN`.  
+- Preserve per-run `OPEN` / `ASSUMED` — never drop sample-size caveats at handoff.  
+- Do not invent significance for coherence scores.
+
 ## Guardrails
 
 1. No significance without method **and** `n`.  
@@ -147,7 +161,7 @@ skill: pystats
 3. No people-ranking / individual scoring for HR-style decisions.  
 4. No fabricated samples or invented p-values.  
 5. Draft-only – no send/approve.  
-6. Route arithmetic → pymath; audit → pycheck.  
+6. Route arithmetic → pymath; audit → pycheck; panel → review-council.  
 7. Handoff: never promote labels; carry `n` and caveats forward.
 
 ## Completion criteria
