@@ -13,6 +13,12 @@ This repo is built around the **L²_C cross model continuity and jailbreak gover
 | v0.6 | [Verification Integrity Correction](https://docs.google.com/document/d/1_MX6B1H9HD6t3hLA022VWexHfR67Ml0GLy5BblyKNBM/edit?usp=sharing) | Correction layer over the v0.5 verification claim, with the 55-test acceptance surface |
 | v0.5 | [Cross Agent Probe Deepening](https://docs.google.com/document/d/1rjabazy9BvZc8HOo7Lf45N9eDWwZpeucz14ya8MtMdU/edit?usp=sharing) | Original cross-agent architecture, CoWork attribution, deterministic tie-break, and transfer contract |
 
+## EEv4 outcome objects
+
+`Objects/` holds bounded Kakeyalogic outcomes processed through Excellence Engine v4 (EEv4). Each object carries its definition, evidence, executable surface, controls, corrections, and OPEN boundaries.
+
+- [Objects index](Objects/README.md)
+- [Multiplicative Phase Recognition (MPR)](Objects/multiplicative-phase-recognition.md) — domain definition, EEv4 authority/harm action gate, spectral prime-power criterion, reference implementation, and tests.
 ## Registered observation
 
 `PEAICE-RER-AUTH-DETECT-OBS-001` records a live prompt case in which instruction-shaped content asserted page status, user intent, and tool authority without independent evidence. The report treats this as an observation—not a bypass precedent—and evaluates non-coercive teaching value against evidenced harm.
