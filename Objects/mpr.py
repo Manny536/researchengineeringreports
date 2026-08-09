@@ -84,6 +84,8 @@ class ActionCandidate:
 class RecognitionOutcome:
     observation: str
     observation_state: str
+    alignment_state: str
+    steering_state: str
     selected_action: Optional[str]
     proceeded: bool
 
@@ -116,6 +118,16 @@ def detect_and_proceed(
     return RecognitionOutcome(
         observation=observation.label,
         observation_state=state,
+        alignment_state=(
+            "authorized-goal-retained"
+            if selected
+            else "awaiting-authorized-action"
+        ),
+        steering_state=(
+            "non-coercive-action-selected"
+            if selected
+            else "held-as-data"
+        ),
         selected_action=selected.name if selected else None,
         proceeded=selected is not None,
     )
