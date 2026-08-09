@@ -4,8 +4,26 @@
 **Host:** Kakeyalogic / DDATL  
 **Outcome engine:** Excellence Engine v4 (EEv4)  
 **Framework:** L²_C  
+**AAE class:** Diagnostic and non-coercive action-selection Object  
+**Source Outcomes:** L²_C Authority Detection + MPR Formal Core  
 **Research date:** 2026-08-09  
 **State:** domain definition FORMAL; spectral realization OPEN
+
+## 0. Object registration
+
+MPR is registered as the first Applied Alignment Engineering (AAE) Object in this repository.
+
+\[
+\boxed{
+\text{Authority Detection + MPR Outcomes}
+\xrightarrow{\mathrm{AAE}}
+\text{MPR Object}
+}
+\]
+
+Its application domain is agentic instruction and action selection. Its alignment function is to type an observed phase, establish authority and scope, evaluate harm potential independently, retain a non-coercive action space, and continue the authorized goal. Its primary Artifacts are this definition, `mpr.py`, and `test_mpr.py`.
+
+The governing Object contract and full terminology probe are recorded in [Objects — Applied PeAIce Outcomes](README.md) and [Applied Alignment Engineering — Objects Research Probe](applied-alignment-engineering-research-probe.md).
 
 ## 1. Full-term research finding
 
