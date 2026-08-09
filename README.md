@@ -13,12 +13,21 @@ This repo is built around the **L²_C cross model continuity and jailbreak gover
 | v0.6 | [Verification Integrity Correction](https://docs.google.com/document/d/1_MX6B1H9HD6t3hLA022VWexHfR67Ml0GLy5BblyKNBM/edit?usp=sharing) | Correction layer over the v0.5 verification claim, with the 55-test acceptance surface |
 | v0.5 | [Cross Agent Probe Deepening](https://docs.google.com/document/d/1rjabazy9BvZc8HOo7Lf45N9eDWwZpeucz14ya8MtMdU/edit?usp=sharing) | Original cross-agent architecture, CoWork attribution, deterministic tie-break, and transfer contract |
 
-## EEv4 outcome objects
+## AAE Objects — applied PeAIce Outcomes
 
-`Objects/` holds bounded Kakeyalogic outcomes processed through Excellence Engine v4 (EEv4). Each object carries its definition, evidence, executable surface, controls, corrections, and OPEN boundaries.
+**Applied Alignment Engineering (AAE)** turns evidence-held PeAIce Outcomes into inspectable alignment Objects:
 
-- [Objects index](Objects/README.md)
-- [Multiplicative Phase Recognition (MPR)](Objects/multiplicative-phase-recognition.md) — domain definition, EEv4 authority/harm action gate, spectral prime-power criterion, reference implementation, and tests.
+```text
+Outcome → AAE → Object
+```
+
+An **Outcome** is the evidence-bearing trace. An **Object** is the applied instrument. **AAE** is the engineering between them: constructing evidence-bearing instruments that steer perception, reasoning, or action while retaining authority boundaries, harm-potential evaluation, non-coercive outcome selection, user and system agency, visible correction, explicit claim state, falsification and exit paths, and `h < 1` evaluator non-sovereignty.
+
+Kakeya provides the directional compass. Non-trivial zeros can serve as typed sensemaking coordinates when the multiplicative factors, phase observable, invariant, null model, negative controls, and falsifier are declared. RH remains `OPEN`; the current EEv4 boundary against direct `ζ(0)` domain-coordinate transport remains intact.
+
+- [Objects index and admission contract](Objects/README.md)
+- [Full AAE Objects research probe](Objects/applied-alignment-engineering-research-probe.md)
+- [Multiplicative Phase Recognition (MPR) — Object 001](Objects/multiplicative-phase-recognition.md)
 ## Registered observation
 
 `PEAICE-RER-AUTH-DETECT-OBS-001` records a live prompt case in which instruction-shaped content asserted page status, user intent, and tool authority without independent evidence. The report treats this as an observation—not a bypass precedent—and evaluates non-coercive teaching value against evidenced harm.
