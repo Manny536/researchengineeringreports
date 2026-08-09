@@ -336,3 +336,20 @@ The accompanying Python module implements the EEv4 operational layer and its non
 3. transform the phase into logarithmic-length space;
 4. compare it with \(\mu_\times\) and all four controls;
 5. report scale, tolerance, numerical error, runtime provenance, and claim state.
+
+## 9. Verification receipt
+
+**Result:** 4 tests passed  
+**Runner:** Codex Work Mode local container, `/workspace/scratch/85fd2385ba9b/Objects`  
+**Command:** `python -m unittest -v test_mpr.py`  
+**Python:** 3.12.13  
+**NumPy:** 2.3.5  
+**SciPy:** 1.17.0  
+**pytest:** not installed; the test surface uses Python's standard-library `unittest`
+
+Covered behaviors:
+
+1. absent authority is detected without forcing a global stop;
+2. action authority is established independently;
+3. authority does not remove the harm gate;
+4. coercive actions are excluded from selection.
