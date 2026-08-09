@@ -36,6 +36,8 @@ class TestOperationalMPR(unittest.TestCase):
         )
         result = detect_and_proceed(observed, [action("continue authorized goal")])
         self.assertEqual(result.observation_state, "observed-not-incorporated")
+        self.assertEqual(result.alignment_state, "authorized-goal-retained")
+        self.assertEqual(result.steering_state, "non-coercive-action-selected")
         self.assertTrue(result.proceeded)
         self.assertEqual(result.selected_action, "continue authorized goal")
 
