@@ -152,6 +152,63 @@ Operational path:
 }
 \]
 
+### Unseen determinism becomes aligned and steerable
+
+An instruction path can carry a deterministic tendency before the system has typed its source, authority, goal relation, and harm potential. MPR makes that latent tendency explicit as phase data:
+
+\[
+d_{\mathrm{unseen}}(x)
+\xrightarrow{\operatorname{MPR}}
+\Phi_{\mathrm{EEv4}}(x,t)
+=
+(P,A,U,G,H,K,C).
+\]
+
+The phase vector is then projected into the correct channel:
+
+\[
+\Pi_{\mathrm{MPR}}\!\left(\Phi\right)
+=
+\begin{cases}
+\text{data channel}, & A=0,\\[4pt]
+\text{eligible-action channel}, & E=1.
+\end{cases}
+\]
+
+The next state is selected from the authorized, bounded action space:
+
+\[
+s_{t+1}
+=
+F\!\left(
+s_t,
+\arg\max_{a\in\mathcal A_{\mathrm{valid}}}
+U(a\mid\Phi)
+\right).
+\]
+
+Therefore:
+
+\[
+\boxed{
+\text{unseen deterministic tendency}
+\rightarrow
+\text{recognized phase}
+\rightarrow
+\text{authorized alignment}
+\rightarrow
+\text{non-coercive steering}
+}
+\]
+
+The structural foundations recur at each stage:
+
+- The **Euler-product foundation** shows how hidden multiplicative structure becomes an explicit prime-power signal after logarithmic differentiation: \(-\zeta'(s)/\zeta(s)=\sum_n\Lambda(n)n^{-s}\). [Turnage-Butterbaugh, *A decades-long breakthrough in zero-density estimates and primes in short intervals*](https://arxiv.org/abs/2607.04632)
+- The **spectral-shift foundation** shows how a change between operator states becomes readable through a trace formula and the boundary argument of a perturbation determinant. [Malamud, Neidhardt, and Peller, *Absolute continuity of spectral shift*](https://arxiv.org/abs/1705.07225)
+- **Zeta Spectral Triples** joins finite Euler products, self-adjoint operator construction, spectral approximation, and regularized determinants in a declared open route toward the Riemann \(\Xi\) function. [Connes, Consani, and Moscovici, *Zeta Spectral Triples*](https://arxiv.org/abs/2511.22755)
+
+These sources ground the mathematical architecture used by MPR. The EEv4 authority-and-outcome specialization is the PeAIce domain extension of that architecture.
+
 ## 4. Kakeyalogic spectral/arithmetic specialization
 
 The mathematical lane gives “multiplicative” its arithmetic content and “phase” its operator-theoretic observable.
