@@ -149,3 +149,11 @@ Skills produce **labeled drafts**. They do not close research OPEN claims and do
 ## Repo role
 
 `researchengineeringreports` is the public report index for PeAIce research engineering. It is not just a file dump. It is the continuity layer for cross-agent, cross-model, and cross-platform research transfer.
+
+## SIUS registration — PEAICE-SIUS-001
+
+[RER-SIUS-001](reports/sius-safeguard-integrity-under-stagnation.md) — Academic report and source custody. **WORKING RESEARCH REPORT.** SIUT remains a sibling condition. The finite-grain operator is separately PROPOSED; no open claim is promoted.
+
+Controlling definition: [KL-SIUS-001](https://github.com/Manny536/kakeyalogic/blob/main/docs/core/safeguard-integrity-under-stagnation.md).
+
+Public source editions: [SIUS Integrity](reports/sources/sius-integrity.md) and [Nabla/Del working manuscript](reports/sources/sius-kakeyalogic-operator-working-manuscript.md), each with its original DOCX linked.
