@@ -5,7 +5,7 @@
 **Status:** WORKING RESEARCH REPORT
 **Registered:** 2026-09-16
 
-Standalone basis: [SIUS Integrity.docx](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/sius-integrity-provenance.md), supplied by the user in “Explain sticky sets.” [Source provenance and limits](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/sius-integrity-provenance.md).
+Standalone basis: [SIUS Integrity.docx](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/SIUS%20Integrity.docx), supplied by the user in “Explain sticky sets.” [Source provenance and limits](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/sius-integrity-provenance.md).
 
 ## Abstract
 
@@ -35,7 +35,7 @@ The source's SAVER sequence is Observe → Grain → Gate → Overlap → Refine
 | Finite-grain Del/curl operational diagnostic | PROPOSED; separate working manuscript | Domain, embedding, observables and validation OPEN |
 | Operational SIUS and SIUT validity | OPEN | Independent, scoped deployment and longitudinal evidence owed |
 
-The DOCX calls its thesis a “structural theorem”; this registration does not promote it to a proved mathematical theorem. Named organizations, allegations and exact incident counts from the source are not repeated as verified findings. Original wording remains in the author-held source identified by its hash. No external bibliography has been reconstructed or silently endorsed.
+The DOCX calls its thesis a “structural theorem”; this registration does not promote it to a proved mathematical theorem. Named organizations, allegations and exact incident counts from the source are not repeated as verified findings. Original wording remains in the public source editions identified by their hashes. No external bibliography has been reconstructed or silently endorsed.
 
 ## Study path and falsifiers
 
@@ -58,4 +58,13 @@ This is the academic report surface and source provenance surface. Definition au
 
 ## Additional operator manuscript
 
-The user also supplied [SIUS_Kakeyalogic_Operator_Working_Manuscript.docx](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/sius-operator-provenance.md), v0.1 (16 September 2026), by Manuel Coleman / Love Labs LCA. [Source precedence and hash](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/sius-operator-provenance.md) record why its coarse-stagnation definition and SIUT-replacement wording do not override the standalone registration. Its finite-scale Del, oriented-face circulation, typed diagnostic tuple and HELD corrections inform only `KL-SIUS-OP-001`. In particular, HC-AC-01 excludes analytic-continuation and continuation/reclaim machinery. No executable operator or scale-transfer result is asserted.
+The user also supplied [SIUS_Kakeyalogic_Operator_Working_Manuscript.docx](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/SIUS_Kakeyalogic_Operator_Working_Manuscript.docx), v0.1 (16 September 2026), by Manuel Coleman / Love Labs LCA. [Source precedence and hash](https://github.com/Manny536/researchengineeringreports/blob/main/reports/sources/sius-operator-provenance.md) record why its coarse-stagnation definition and SIUT-replacement wording do not override the standalone registration. Its finite-scale Del, oriented-face circulation, typed diagnostic tuple and HELD corrections inform only `KL-SIUS-OP-001`. In particular, HC-AC-01 excludes analytic-continuation and continuation/reclaim machinery. No executable operator or scale-transfer result is asserted.
+
+## Public source editions
+
+| Source | Markdown | Original |
+|---|---|---|
+| Standalone SIUS Integrity | [Read](sources/sius-integrity.md) | [DOCX](sources/SIUS%20Integrity.docx) |
+| Nabla/Del working manuscript | [Read](sources/sius-kakeyalogic-operator-working-manuscript.md) | [DOCX](sources/SIUS_Kakeyalogic_Operator_Working_Manuscript.docx) |
+
+These are supplied source editions. Their original claims and conflicts are retained visibly; the registered interpretation and open obligations above govern this change set.
