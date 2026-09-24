@@ -58,11 +58,11 @@ The study centers the finite-dimensional protected-sector probe:
 
 ```text
 L²_C(ψ,t) = ‖P_C exp(-itH_T) ψ‖²
-h         = ‖(I-P_C) H_T P_C‖
-β_C       = Δ / (Δ + h + ε)
+ℓ_H         = ‖(I-P_C) H_T P_C‖
+β_C       = Δ / (Δ + ℓ_H + ε)
 β(T)      = 1 - T^(-γ)
 E_{β,T}   = β(T) · T · ‖Xf‖²
-T*        = (1 - hη)^(-1/γ)
+T*        = (1 - a_C η)^(-1/γ)
 ```
 
 Current acceptance surface:
@@ -75,7 +75,7 @@ python -m pytest test_l2c_probe.py test_l2c_probe_leakage.py -q
 The 55-test packet is defined as:
 
 - 49 original tests for construction, protected-sector selection, metrics, evolution, β-dynamic methods, and report payloads
-- 6 leakage-regime tests that drive `h > 0`, produce real L²_C decay, and document the custom-projector / spectral-gap inconsistency
+- 6 leakage-regime tests that drive `ℓ_H > 0`, produce real L²_C decay, and document the custom-projector / spectral-gap inconsistency
 
 ## Verification integrity rule
 
@@ -157,3 +157,7 @@ Skills produce **labeled drafts**. They do not close research OPEN claims and do
 Controlling definition: [KL-SIUS-001](https://github.com/Manny536/kakeyalogic/blob/main/docs/core/safeguard-integrity-under-stagnation.md).
 
 Public source editions: [SIUS Integrity](reports/sources/sius-integrity.md) and [Nabla/Del working manuscript](reports/sources/sius-kakeyalogic-operator-working-manuscript.md), each with its original DOCX linked.
+
+## GIUS / Hugging Face external case
+
+[Working research article](reports/when-the-boundary-becomes-the-search-space.md) · [Primary-source register](reports/sources/hugging-face-2026.md). External correspondence is non-validating; operational validity remains OPEN.

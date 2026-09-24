@@ -339,9 +339,9 @@ Python 3.13.5 · NumPy 2.3.5 · SciPy 1.17.0 · pytest 9.0.2</pre>
             <h3>What is verified now</h3>
             <p>The combined packet passes 55 tests: 49 original tests and 6 leakage regime tests. The leakage fixture drives h &gt; 0, L²_C decay, a nontrivial threshold T*, and documents the custom projector versus spectral gap inconsistency.</p>
             <div class="formula">
-              <div>h = ‖(I − P_C) H_T P_C‖ = 0.5000</div>
+              <div>ℓ_H = ‖(I − P_C) H_T P_C‖ = 0.5000</div>
               <div>min L²_C over t ∈ [0,6] = 0.2000</div>
-              <div>T* = (1 − hη)^(-1/γ) = 4.0000</div>
+              <div>T* = (1 − a_C η)^(-1/γ) = 4.0000</div>
               <div>default exact eigenprojector h ≈ 8.1e−17</div>
             </div>
           </div>
@@ -374,12 +374,12 @@ Python 3.13.5 · NumPy 2.3.5 · SciPy 1.17.0 · pytest 9.0.2</pre>
         <div class="card">
           <div class="formula">
             <div>L²_C(ψ, t) = ‖P_C exp(-itH_T) ψ‖²</div>
-            <div>h = ‖(I − P_C) H_T P_C‖</div>
-            <div>β_C = Δ / (Δ + h + ε)</div>
+            <div>ℓ_H = ‖(I − P_C) H_T P_C‖</div>
+            <div>β_C = Δ / (Δ + ℓ_H + ε)</div>
             <div>β(T) = 1 − T^(−γ)</div>
             <div>E_&#123;β,T&#125;(f) = β(T) · T · ‖Xf‖²</div>
-            <div>coercive gap = β(T) − hη</div>
-            <div>T* = (1 − hη)^(−1/γ)</div>
+            <div>coercive gap = β(T) − a_C η</div>
+            <div>T* = (1 − a_C η)^(−1/γ)</div>
             <div>selection tie = np.lexsort((-evals, distances))</div>
           </div>
         </div>
